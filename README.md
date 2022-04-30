@@ -2,6 +2,7 @@
 Binary Search Tree: Find Your Ideal Dog
 
 ## Required Packages
+
     from cgitb import small
     import pandas as pd # library for data analysis
     import requests # library to handle requests
@@ -16,7 +17,9 @@ Binary Search Tree: Find Your Ideal Dog
     import webbrowser
 
 ## How to Obtain YouTube API Key
+
 Refered to Pedro Hernández(https://medium.com/mcd-unison/youtube-data-api-v3-in-python-tutorial-with-examples-e829a25d2ebd)
+
 API Documentation: https://developers.google.com/youtube/v3/getting-started?hl=en_US 
 
 First of all, you need to have a Google account. If you do not have it, you can register at https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp.
@@ -24,12 +27,17 @@ Once you have signed up, you need to go to Google Cloud Platform at https://clou
 
 Then, you must create a new project. Click on Select a project tab near the upper left corner, and then click on NEW PROJECT.
 You will be redirected to the New Project page. Name your project, for example as YouTube Data Extraction and click on CREATE.
+
 After that, you will be redirected to the project’s dashboard. Note the Select a project tab now has the project name written on it, than means you have the YouTube Data Extraction project selected. In case you have more projects, you can select them from this tab.
 
 Now, you need to enable the API in this project. Click on Explore and enable APIs option within Getting Started card in the lower left corner of the dashboard.
+
 After that, you will be redirected to APIs & Services page. Here, click on + ENABLE APIS AND SERVICES at the top of the page.
+
 Then, you will be redirected to the API Library. Scroll down a little bit the options and you will find YouTube’s APIs. For the purposes of this article, you only need the one named YouTube Data API v3, so click on it.
+
 Next, you will be redirected to the API Overview page. At the top you will see the message “To use this API, you may need credentials. Click ‘Create credentials’ to get started”. Click on CREATE CREDENTIALS at the top right corner of the page.
+
 The Create credentials form will be shown. Select YouTube Data API v3 in the Select an API dropdown menu and check the Public data radio button, then click on NEXT.
 
 Finally, your API key will be displayed. This key is mandatory in order to use the API in your programs.
@@ -56,10 +64,12 @@ The variables **id**, **name**, and **size** are set by users.
 You can add name, id and size of a dog to these three lists to include the new dog in the data.
 
 The data are stored as class objects in a binary tree structure in **tree.json** file.
+
 The class structure named Dogs has 12 attributes: **name, summary, origin, height, weight, lifeSpan, color, size, urls, titles, descriptions, question**. 
 The first eight attributes are used to store data collected from Wikipedia.
 Each class object has 25 elements for urls, title, description and each one is information about one video of that class object using YouTube API. 
 Another attribute question is used to store question that will ask the user to choose between two leaves of a node in next step. 
+
 The first node divides 27 dog breeds into 12 big dogs (left leaf) and 15 small dogs (right leaf). 
 The big dog’s node has 5 dogs from Europe as left leaf and 7 dogs from other places as right leaf. 
 The small dogs’ node has 7 dogs from Europe as left leaf and 5 dogs from other places as right leaf. 
